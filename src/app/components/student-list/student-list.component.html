@@ -1,0 +1,26 @@
+<h3 class="text-center">Student List Page</h3>
+<table class="table table-hover">
+<tr class="bg-info text-white">
+<th>Id</th>
+<th>NAME</th>
+<th>GENDER</th>
+<th>COURSE</th>
+<th>ADDRESS</th>
+<th>OPERATIONS</th>
+</tr>
+<tr *ngFor="let s of students">
+<td>{{s.stdId}}</td>
+<td>{{s.stdName}}</td>
+<td>{{s.stdGen}}</td>
+<td>{{s.stdCourse}}</td>
+<td>{{s.stdAddr}}</td>
+<td>
+<button type="button" class="btn btn-danger" (click)="deleteStudent(s.stdId)">DELETE</button>
+&nbsp;
+<button type="button" class="btn btn-warning" (click)="editStudent(s.stdId)">EDIT</button>
+
+</td>
+</tr>
+</table>
+
+<div class="text-center"><strong>{{message}}</strong></div>
